@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CO2 Emissions Prediction Project - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="amazon.html" class="logo">Project Overview</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Go Back</a></li>
+					<li class="active"><a href="amazon.html">Project Overview</a></li>
+				</ul>
+				<ul class="icons"
+                <li><a href="https://www.linkedin.com/in/tauscher-jens/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/jenst1234" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+                <!-- Post -->
+                <section class="post">
+                    <header class="major">
+                        <span class="date">Aug 2023</span>
+                        <h1>Amazon Products Analysis</h1>
+                        <p>An in-depth exploratory data analysis aiming to unravel market dynamics, consumer behaviors and strategic business opportunities</p>
+                    </header>
+                    <div class="image projects"><img src="images/amazon2.png" alt="Titanic Analysis" /></div>
+                    
+                    <h2>Introduction</h2>
+                    <p>This project delves into a comprehensive analysis of a dataset collected from the Indian Amazon website in 2023, aiming to unravel market dynamics, consumer behaviors, and strategic business opportunities. The primary objective was to identify the most popular product categories and brands and analyze the impact of pricing, discounts, and reviews on purchasing behavior using Matplotlib and Seaborn.</p>
+
+                    <h2>Dataset</h2>
+                    <p>The dataset received from <a href="https://www.kaggle.com/datasets/lokeshparab/amazon-products-dataset" target="_blank">Kaggle</a> comprises 1,103,170 entries across 142 product categories, containing information such as product name, category, price, and customer ratings. Data cleaning involved addressing missing values, currency conversions, removing outliers and duplicates, and transforming non-numeric data.
+						<table>
+							<thead>
+								<tr>
+									<th>Feature</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>name</td>
+									<td>The name of the product</td>
+								</tr>
+								<tr>
+									<td>main_category</td>
+									<td>The main category of the product it belongs to</td>
+								</tr>
+								<tr>
+									<td>sub_category</td>
+									<td>The sub-category of the product it belongs to</td>
+								</tr>
+								<tr>
+									<td>image</td>
+									<td>The image of the product</td>
+								</tr>
+								<tr>
+									<td>link</td>
+									<td>The Amazon website reference link of the product</td>
+								</tr>
+								<tr>
+									<td>ratings</td>
+									<td>The ratings given by Amazon customers for the product</td>
+								</tr>
+								<tr>
+									<td>no_of_ratings</td>
+									<td>The number of ratings given to this product on Amazon</td>
+								</tr>
+								<tr>
+									<td>discount_price</td>
+									<td>The discount price of the product</td>
+								</tr>
+								<tr>
+									<td>actual_price</td>
+									<td>The actual Manufacturer's Retail Price (MRP) of the product</td>
+								</tr>
+							</tbody>
+						</table>
+
+                    
+					<h2>Preprocessing</h2>
+					<p>The initial data processing involved:</p>
+					<ul>
+						<li> Handling missing values and data inconsistencies</li>
+						<li> Currency conversion for uniformity</li>
+						<li> Removing duplicates and outliers</li>
+						<li> Transforming non-numeric data into analyzable formats</li>
+					</ul>
+
+					<h2>Key Findings</h2>
+        			<h3>Popular Product Categories and Brands</h3>
+        				<ul>
+            				<li>Identification of strong consumer demand in categories like "Accessories," "Women's Clothing," and "Electronics."</li>
+            				<li>Insights into niche markets such as "Music" and "Pet Supplies" for potential business focus.</li>
+        				</ul>
+
+        			<h3>Impact of Pricing and Reviews</h3>
+        				<ul>
+            				<li>Analysis of how pricing, discounts, and customer reviews affect purchasing decisions, with findings indicating minimal impact of discounts on customer ratings.</li>
+        				</ul>
+
+        			<h3>Pricing and Customer Ratings Analysis</h3>
+        				<ul>
+            				<li>Examination of pricing trends across various categories, identifying specific price ranges that attract more consumers.</li>
+            				<li>Analysis of customer satisfaction levels across different categories, with most products averaging a rating of 4.</li>
+        				</ul>
+					
+                    <h2>Conclusions</h2>
+                    <p>The project successfully provides strategic insights into the Indian e-commerce market, revealing critical factors that influence consumer purchases and highlighting areas for potential growth and investment.</p>
+
+					<a href="https://github.com/jenst1234/Data_Science_Portfolio/blob/main/6%23%20Amazon%20Products%20Analysis/notebooks/Amazon%20Products%20Analysis%20-%20Preprocessing.ipynb" class="button primary">View Preprocessing - Notebook</a> <a href="https://github.com/jenst1234/Data_Science_Portfolio/blob/main/6%23%20Amazon%20Products%20Analysis/notebooks/Amazon%20Products%20Analysis%20-%20Visualisation.ipynb" class="button primary">View EDA - Notebook</a>
+					<!-- More detailed sections about the project can be added here -->
+				</section>
+				
+					
+
+			</div>
+
+<!-- Footer -->
+<footer id="footer">
+	<section>
+		<form method="post" action="mailto:jens.tauscher1@gmail.com">
+			<div class="fields">
+				<div class="field">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" />
+				</div>
+				<div class="field">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" />
+				</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" rows="3"></textarea>
+				</div>
+			</div>
+			<ul class="actions">
+				<li><input type="submit" value="Send Message" /></li>
+			</ul>
+		</form>
+	</section>
+	<section class="split contact">
+		<section>
+			<h3>Email</h3>
+			<p><a href="mailto:jens.tauscher1@gmail.com">jens.tauscher1@gmail.com</a></p>
+		</section>
+		<section>
+			<h3>Social</h3>
+			<ul class="icons alt">
+				<li><a href="https://www.linkedin.com/in/tauscher-jens/?locale=en_US" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/jenst1234" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</section>
+	</section>
+</footer>
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; 2024 Jens Tauscher</li>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

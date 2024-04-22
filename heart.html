@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Heart Diseases</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="heart.html" class="logo">Project Overview</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Go Back</a></li>
+					<li class="active"><a href="heart.html">Project Overview</a></li>
+				</ul>
+				<ul class="icons"
+                <li><a href="https://www.linkedin.com/in/tauscher-jens/?locale=en_US" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/jenst1234" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+                <!-- Post -->
+                <section class="post">
+                    <header class="major">
+                        <span class="date">Feb 2024</span>
+                        <h1>Heart Disease: EDA & Prediction</h1>
+                        <p>An in-depth analysis and predictive modeling project, exploring factors influencing the risk of heart diseases.</p>
+                    </header>
+                    <div class="image projects"><img src="images/heart_disease2.png" alt="Titanic Analysis" /></div>
+                    
+                    <h2>Introduction</h2>
+                    <p>Heart disease is a leading global health concern. Early detection and risk assessment are crucial for preventative measures. This project explores the potential of machine learning to predict an individual's risk of heart disease.</p>
+
+                    <h2>Data</h2>
+                    <p>The project utilizes a dataset from the <a href="https://archive.ics.uci.edu/dataset/45/heart+disease" target="_blank">UCI Machine Learning Repository (Cleveland database)</a>.  This dataset contains information for 303 individuals, with 14 features encompassing:
+						<ul>
+    						<li><strong>Biometric data:</strong> Age, blood pressure, cholesterol levels, resting heart rate</li>
+    						<li><strong>Lifestyle factors</strong> Chest pain type</li>
+    						<li><strong>Medical history:</strong> ST-segment depression, number of major vessels</li>
+						</ul>
+					<p>The target variable is the presence or absence of heart disease.</p>
+
+                    <h2>Methodology</h2>
+        <p>Various machine learning models were employed to analyze the data and build predictive models:</p>
+        <ul>
+            <li><strong>Logistic Regression:</strong> A classic approach for classification problems, suitable for understanding the relationship between features and heart disease.</li>
+            <li><strong>Naive Bayes:</strong> A probabilistic model that works well with limited data and can handle features with different scaling.</li>
+            <li><strong>Random Forest:</strong> An ensemble method combining multiple decision trees for improved accuracy and handling complex relationships.</li>
+            <li><strong>Decision Trees:</strong> A model offering interpretability, allowing visualization of the decision-making process for risk prediction.</li>
+            <li><strong>XGBoost:</strong> A powerful machine learning model known for its high accuracy in various tasks, including predicting heart disease.</li>
+        </ul>
+
+        <h2>Results</h2>
+        <p>
+            <ul>
+                <li><strong>Model Performance:</strong> The project achieved promising results, with the best models (XGBoost and Random Forest) exceeding 90% accuracy in predicting heart disease.</li>
+                <li><strong>Key Risk Factors:</strong> The analysis identified critical factors influencing heart disease risk, including age, gender, blood pressure, cholesterol levels, resting heart rate, chest pain type, ST-segment depression, and the number of major vessels.</li>
+            </ul>
+        </p>
+
+        <h2>Significance</h2>
+        <p>This project demonstrates the effectiveness of machine learning in predicting heart disease. Early risk assessment can enable healthcare professionals to:</p>
+        <ul>
+            <li>Implement preventive measures like lifestyle modifications or medication.</li>
+            <li>Prioritize patients for further diagnostic testing and treatment.</li>
+            <li>Develop personalized healthcare plans to manage risk factors.</li>
+        </ul>
+
+        <h2>Next Steps</h2>
+        <p>
+            <ul>
+                <li><strong>Model Optimization:</strong> Refining the models by tuning hyperparameters and potentially using feature engineering techniques.</li>
+                <li><strong>Data Integration:</strong> Exploring the inclusion of additional data sources like medical history or genetic information for potentially more comprehensive risk assessment.</li>
+                <li><strong>Web-Based Tool:</strong> Developing a user-friendly web application allowing individuals to input their health data and receive a personalized risk assessment.</li>
+            </ul>
+        </p>
+
+        <p>This project contributes to the advancement of machine learning in healthcare by providing a promising tool for heart disease prevention. Future developments can enhance the accuracy and clinical utility of this approach, ultimately promoting positive health outcomes.</p>
+    
+
+					<a href="https://github.com/jenst1234/Data_Science_Portfolio/blob/main/4%23%20Heart%20Disease%20Prediction/notebooks/heart_disease_prediction.ipynb" class="button primary">View Notebook</a> 
+					<!-- More detailed sections about the project can be added here -->
+				</section>
+				
+					
+
+			</div>
+
+<!-- Footer -->
+<footer id="footer">
+	<section>
+		<form method="post" action="mailto:jens.tauscher1@gmail.com">
+			<div class="fields">
+				<div class="field">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" />
+				</div>
+				<div class="field">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" />
+				</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" rows="3"></textarea>
+				</div>
+			</div>
+			<ul class="actions">
+				<li><input type="submit" value="Send Message" /></li>
+			</ul>
+		</form>
+	</section>
+	<section class="split contact">
+		<section>
+			<h3>Email</h3>
+			<p><a href="mailto:jens.tauscher1@gmail.com">jens.tauscher1@gmail.com</a></p>
+		</section>
+		<section>
+			<h3>Social</h3>
+			<ul class="icons alt">
+				<li><a href="https://www.linkedin.com/in/tauscher-jens/?locale=en_US" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/jenst1234" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</section>
+	</section>
+</footer>
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; 2024 Jens Tauscher</li>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Telco Churn Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="telco.html" class="logo">Project Overview</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Go Back</a></li>
+					<li class="active"><a href="telco.html">Project Overview</a></li>
+				</ul>
+				<ul class="icons"
+                <li><a href="https://www.linkedin.com/in/tauscher-jens/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/jenst1234" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+                <!-- Post -->
+                <section class="post">
+                    <header class="major">
+                        <span class="date">Feb 2024</span>
+                        <h1>Telco Chustomer Churn Prediction</h1>
+                        <p>An in-depth analysis and predictive modeling project to optimize marketing efforts and reduce customer loss</p>
+                    </header>
+                    <div class="image projects"><img src="images/churn2.png" alt="Churn Analysis" /></div>
+                    
+                    <h2>Introduction</h2>
+                    <p>This project aims to support Teleconfia's US market entry, specifically focusing on Florida, by leveraging customer churn prediction to optimize marketing efforts and reduce customer loss.</p>
+
+                    <h2>Objective</h2>
+                    <ul>
+						<li><strong>Identify High-Risk Areas:</strong> Utilize customer data to pinpoint the four Florida city areas with the highest customer churn rates.</li>
+						<li><strong>Predict Individual Churn:</strong> Develop a churn prediction model to identify individual customers at high risk of leaving Teleconfia's network.</li>
+						<li><strong>Data-Driven Insights:</strong> Analyze relevant datasets to uncover factors that contribute to customer churn.</li>
+						<li><strong>Model Development & Visualization:</strong> Build a robust churn prediction model and create compelling visualizations.</li>
+					</ul>
+					
+					<h2>Dataset:</h2>
+            		<p>The project utilizes a comprehensive customer behavior and service usage dataset obtained from <a href="https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset">Kaggle</a>.</p>
+					<table>
+						<thead>
+							<tr>
+								<th>Feature</th>
+								<th>Data Type</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>account_length</td>
+								<td>Integer</td>
+								<td>Number of days the customer has been with the telecom provider.</td>
+							</tr>
+							<tr>
+								<td>international_plan</td>
+								<td>Categorical</td>
+								<td>Whether the customer has a special pricing plan for international calls (`yes` or `no`).</td>
+							</tr>
+							<tr>
+								<td>voice_mail_plan</td>
+								<td>Categorical</td>
+								<td>Whether the customer has a special pricing plan for voice mail services (`yes` or `no`).</td>
+							</tr>
+							<tr>
+								<td>number_vmail_messages</td>
+								<td>Integer</td>
+								<td>Number of voice mail messages the customer has.</td>
+							</tr>
+							<tr>
+								<td>total_day_minutes</td>
+								<td>Float</td>
+								<td>Total duration (in minutes) of the customer's calls during the day.</td>
+							</tr>
+							<tr>
+								<td>total_day_calls</td>
+								<td>Integer</td>
+								<td>Total number of calls the customer made during the day.</td>
+							</tr>
+							<tr>
+								<td>total_day_charge</td>
+								<td>Float</td>
+								<td>Total charges for the customer's calls during the day.</td>
+							</tr>
+							<tr>
+								<td>total_eve_minutes</td>
+								<td>Float</td>
+								<td>Total duration (in minutes) of the customer's calls during the evening.</td>
+							</tr>
+							<tr>
+								<td>total_eve_calls</td>
+								<td>Integer</td>
+								<td>Total number of calls the customer made during the evening.</td>
+							</tr>
+							<tr>
+								<td>total_eve_charge</td>
+								<td>Float</td>
+								<td>Total charges for the customer's calls during the evening.</td>
+							</tr>
+							<tr>
+								<td>total_night_minutes</td>
+								<td>Float</td>
+								<td>Total duration (in minutes) of the customer's calls during the night.</td>
+							</tr>
+							<tr>
+								<td>total_night_calls</td>
+								<td>Integer</td>
+								<td>Total number of calls the customer made during the night.</td>
+							</tr>
+							<tr>
+								<td>total_night_charge</td>
+								<td>Float</td>
+								<td>Total charges for the customer's calls during the night.</td>
+							</tr>
+							<tr>
+								<td>total_intl_minutes</td>
+								<td>Float</td>
+								<td>Total duration (in minutes) of the customer's international calls.</td>
+							</tr>
+							<tr>
+								<td>total_intl_calls</td>
+								<td>Integer</td>
+								<td>Total number of international calls the customer made.</td>
+							</tr>
+							<tr>
+								<td>total_intl_charge</td>
+								<td>Float</td>
+								<td>Total charges for the customer's international calls.</td>
+							</tr>
+							<tr>
+								<td>customer_service_calls</td>
+								<td>Integer</td>
+								<td>Number of calls the customer made to customer service, e.g., for technical issues.</td>
+							</tr>
+							<tr>
+								<td>churn</td>
+								<td>Categorical</td>
+								<td>Whether the customer has left the service (`True` or `False`).</td>
+							</tr>
+							<tr>
+								<td>local_area_code</td>
+								<td>Categorical</td>
+								<td>The local area code of the customer.</td>
+							</tr>
+							<tr>
+								<td>phone_num</td>
+								<td>Categorical</td>
+								<td>The customer's phone number without the area code.</td>
+							</tr>
+						</tbody>
+					</table>
+                    <h2>Key Features:</h2>
+            			<ul>
+                			<li>Account tenure (account_length)</li>
+                			<li>International calling plan subscription (international_plan)</li>
+                			<li>Voice mail plan subscription (voice_mail_plan)</li>
+                			<li>Customer service call history (customer_service_calls)</li>
+                			<li>Call usage patterns (total_day_minutes, total_eve_minutes, total_night_minutes)</li>
+                			<li>Churn status (churn)</li>
+            			</ul>
+					
+					<h2>Methodology:</h2>
+					<p>The project employs machine learning techniques, specifically logistic regression, to build a churn prediction model. Seaborn and Matplotlib libraries will be used for data visualization and exploration.</p>
+						
+
+					<h2>Results</h2>
+						<ul>
+							<li>Identification of the four Florida city areas with the highest churn rates.</li>
+							<li>A churn prediction model to identify individual customers at risk of leaving Teleconfia.</li>
+							<li>Actionable insights into factors influencing customer churn.</li>
+							<li>Compelling visualizations for clear communication and decision-making.</li>
+						</ul>
+					
+
+					<a href="https://github.com/jenst1234/Data_Science_Portfolio/blob/main/5%23%20Telco%20Churn%20Analysis/notebooks/telco_churn.ipynb" class="button primary">View Notebook</a> 
+					<!-- More detailed sections about the project can be added here -->
+				</section>
+				
+					
+
+			</div>
+
+<!-- Footer -->
+<footer id="footer">
+	<section>
+		<form method="post" action="mailto:jens.tauscher1@gmail.com">
+			<div class="fields">
+				<div class="field">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" />
+				</div>
+				<div class="field">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" />
+				</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" rows="3"></textarea>
+				</div>
+			</div>
+			<ul class="actions">
+				<li><input type="submit" value="Send Message" /></li>
+			</ul>
+		</form>
+	</section>
+	<section class="split contact">
+		<section>
+			<h3>Email</h3>
+			<p><a href="mailto:jens.tauscher1@gmail.com">jens.tauscher1@gmail.com</a></p>
+		</section>
+		<section>
+			<h3>Social</h3>
+			<ul class="icons alt">
+				<li><a href="https://www.linkedin.com/in/tauscher-jens/?locale=en_US" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/jenst1234" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</section>
+	</section>
+</footer>
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; 2024 Jens Tauscher</li>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

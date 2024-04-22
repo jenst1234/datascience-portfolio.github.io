@@ -1,0 +1,229 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Titanic</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<a href="titanic.html" class="logo">Project Overview</a>
+			</header>
+
+			<!-- Nav -->
+			<nav id="nav">
+				<ul class="links">
+					<li><a href="index.html">Go Back</a></li>
+					<li class="active"><a href="titanic.html">Project Overview</a></li>
+				</ul>
+				<ul class="icons"
+                <li><a href="https://www.linkedin.com/in/tauscher-jens/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/jenst1234" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            </ul>
+			</nav>
+
+			<!-- Main -->
+			<div id="main">
+
+                <!-- Post -->
+                <section class="post">
+                    <header class="major">
+                        <span class="date">Feb 2024</span>
+                        <h1>Titanic: Survival Prediction & EDA</h1>
+                        <p>An in-depth analysis and predictive modeling project focused on the Titanic dataset, exploring factors influencing survival rates.</p>
+                    </header>
+                    <div class="image projects"><img src="images/titanic.png" alt="Titanic Analysis" /></div>
+                    
+                    <h2>Project Background</h2>
+                    <p>The sinking of the Titanic in April 1912 remains one of the most infamous disasters in maritime history. On her maiden voyage, the Titanic collided with an iceberg, leading to the loss of over 1500 lives. This project employs machine learning to analyze and predict which passengers might have survived based on various attributes such as age, gender, ticket class, and more.</p>
+
+                    <h2>Objective</h2>
+                    <p>The main goal of this project is to sort vehicles into energy classes using classification techniques and estimate CO2 emissions using regression models. These approaches are intended to not only provide insights into the determinants of CO2 emissions but also to present practical solutions for more environmentally friendly mobility.
+					
+
+                    <h2>Objectives</h2>
+                    <p>The main goal of this project is to develop predictive models that can effectively forecast the survival chances of passengers. This involves:</p>
+						<ul>
+    						<li><strong>Exploratory Data Analysis (EDA):</strong> Examining data for patterns, anomalies, or correlations between variables that might influence survival outcomes.</li>
+    						<li><strong>Predictive Modelling</strong> Using insights gained from EDA to inform the development and tuning of machine learning models.</li>
+    						<li><strong>Feature Utilization:</strong> Analyzing how different features, especially transformed age groups, affect predictions and potentially inform future safety planning and risk assessment.</li>
+						</ul>
+					
+					<h2>About Data</h2>
+					<p>The data used comes from the well-known Titanic dataset available on <a href="https://www.kaggle.com/competitions/titanic" target="_blank">Kaggle</a>, which includes passenger information as described in the data dictionary below:</p>
+					
+					<table>
+						<thead>
+							<tr>
+								<th>Variable</th>
+								<th>Definition</th>
+								<th>Key</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>PassengerId</td>
+								<td>Unique identifier for each passenger</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Survived</td>
+								<td>Survival status</td>
+								<td>0 = No, 1 = Yes</td>
+							</tr>
+							<tr>
+								<td>Pclass</td>
+								<td>Ticket class</td>
+								<td>1 = 1st, 2 = 2nd, 3 = 3rd</td>
+							</tr>
+							<tr>
+								<td>Name</td>
+								<td>Full name of the passenger</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Sex</td>
+								<td>Gender of the passenger</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Age</td>
+								<td>Age in years</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>SibSp</td>
+								<td>Number of siblings / spouses aboard the Titanic</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Parch</td>
+								<td>Number of parents / children aboard the Titanic</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Ticket</td>
+								<td>Ticket number</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Fare</td>
+								<td>Passenger fare</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Cabin</td>
+								<td>Cabin number</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>Embarked</td>
+								<td>Port of embarkation</td>
+								<td>C = Cherbourg, Q = Queenstown, S = Southampton</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h2>Data preparation</h2>
+					<ul>
+						<li><strong>Data Cleaning:</strong> Addressing missing values, especially in 'Age', 'Cabin', and 'Embarked'.</li>
+						<li><strong>Feature Engineering:</strong> Transforming 'Age' into categorical age groups prior to EDA, to better analyze its impact on survival.</li>
+					</ul>
+
+					<h2>Exploratory Data Analysis (EDA)</h2>
+						<ul>
+    						<li><strong>Visual Analysis:</strong> Using plots to explore relationships between survival and features such as 'Pclass', 'Sex', 'Age Groups', and 'Embarked'.							</li>
+    						<li><strong>Statistical Analysis:</strong> Conducting correlation studies to identify significant predictors of survival.</li>
+						</ul>
+					
+					<h2>Model Development</h2>
+						</header>
+						<ol>
+							<li><strong>Initial Model Setup</strong>: Deployment of baseline models including Decision Trees, Random Forest, and XGBoost.</li>
+							<li><strong>Model Evaluation</strong>: Assessment based on Accuracy, Precision, Recall, F1-Score, ROC-AUC score, and cross-validation scores.</li>
+							<li><strong>Model Optimization</strong>: Hyperparameter tuning of promising models like Random Forest and XGBoost.</li>
+							<li><strong>Feature Importance Analysis</strong>: Evaluating the impact of critical features on the predictions, particularly 'Sex', 'Pclass', 'Fare', and 'Age Groups'.</li>
+						</ol>
+
+					<h2>Results</h2>
+						<ul>
+    						<li><strong>XGBoost Tuned Model:</strong> Achieved the highest accuracy of 0.88 and an AUC score of 0.92.</li>
+    						<li><strong>Random Forest Tuned Model:</strong> Showcased robust performance with a score of 0.85 across all metrics and an AUC score of 0.95.</li>
+    						<li><strong>Feature Insights:</strong> Identified 'Sex', 'Pclass', 'Fare', and 'Age Groups' as pivotal in determining survival, supported by EDA and historical accounts.</li>
+						</ul>
+					
+                    <h2>Conclusions and Future Work</h2>
+                    <p>The project illustrates the capability of machine learning in interpreting historical data and making crucial predictions. Potential improvements include expanding data sources, refining models with additional features, and exploring more complex algorithms. Insights from this study could enhance safety protocols and risk assessments in analogous scenarios, thereby improving emergency management strategies.
+					</p>
+
+					<a href="https://github.com/jenst1234/Data_Science_Portfolio/blob/main/3%23%20Titanic%20Survival%20Prediction/notebooks/titanic_surival_eda_prediction.ipynb" class="button primary">View Notebook</a> 
+					<!-- More detailed sections about the project can be added here -->
+				</section>
+				
+					
+
+			</div>
+
+<!-- Footer -->
+<footer id="footer">
+	<section>
+		<form method="post" action="mailto:jens.tauscher1@gmail.com">
+			<div class="fields">
+				<div class="field">
+					<label for="name">Name</label>
+					<input type="text" name="name" id="name" />
+				</div>
+				<div class="field">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" />
+				</div>
+				<div class="field">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" rows="3"></textarea>
+				</div>
+			</div>
+			<ul class="actions">
+				<li><input type="submit" value="Send Message" /></li>
+			</ul>
+		</form>
+	</section>
+	<section class="split contact">
+		<section>
+			<h3>Email</h3>
+			<p><a href="mailto:jens.tauscher1@gmail.com">jens.tauscher1@gmail.com</a></p>
+		</section>
+		<section>
+			<h3>Social</h3>
+			<ul class="icons alt">
+				<li><a href="https://www.linkedin.com/in/tauscher-jens/?locale=en_US" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="https://github.com/jenst1234" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+			</ul>
+		</section>
+	</section>
+</footer>
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; 2024 Jens Tauscher</li>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
